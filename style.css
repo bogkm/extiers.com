@@ -1,0 +1,106 @@
+body {
+  margin:0;
+  font-family:sans-serif;
+  background: radial-gradient(circle,#0f0f15,#050506);
+  color:white;
+}
+
+/* HEADER */
+.header {
+  display:flex;
+  padding:10px;
+  backdrop-filter:blur(10px);
+}
+
+.logo {
+  font-weight:bold;
+  color:#ff003c;
+}
+
+.search {
+  flex:1;
+  margin:0 10px;
+  padding:8px;
+  border-radius:10px;
+  border:none;
+  background:#1a1a22;
+  color:white;
+}
+
+/* MENU */
+.menu {
+  position:fixed;
+  right:-250px;
+  top:0;
+  width:250px;
+  height:100%;
+  background:#111;
+  padding:20px;
+  transition:.3s;
+}
+
+.menu.open { right:0; }
+
+/* FILTERS */
+.filters {
+  display:flex;
+  gap:10px;
+  padding:10px;
+}
+
+.filter {
+  background:#1a1a22;
+  padding:8px 12px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.filter.active {
+  background:#ff003c;
+}
+
+/* CARDS */
+.card {
+  display:flex;
+  align-items:center;
+  margin:10px;
+  padding:10px;
+  background:#14141c;
+  border-radius:12px;
+}
+
+.rank { color:#ff003c; margin-right:10px; }
+
+.avatar { width:40px; margin-right:10px; }
+
+.region {
+  margin-left:auto;
+  padding:5px 10px;
+  border-radius:8px;
+}
+
+.na { background:#ff003c; }
+.eu { background:#00c853; }
+
+/* ADMIN */
+.admin {
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,0.7);
+  display:none;
+  justify-content:center;
+  align-items:center;
+}
+
+.admin-box {
+  background:#111;
+  padding:20px;
+  border-radius:12px;
+  width:300px;
+}
+
+.admin input, .admin select {
+  width:100%;
+  margin:5px 0;
+  padding:8px;
+}
