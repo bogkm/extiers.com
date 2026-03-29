@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EXETI</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- MENU -->
+<div class="menu" id="menu">
+  <h2>EXETI</h2>
+  <a onclick="openAdmin()">🔐 Admin Panel</a>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">EXETI</div>
+  <input class="search" placeholder="Search..." oninput="render()">
+
+  <div class="burger" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+</div>
+
+<!-- FILTERS -->
+<div class="filters">
+  <div class="filter active" onclick="setFilter('all',this)">🏆 Overall</div>
+  <div class="filter" onclick="setFilter('ltm',this)">⚔ LTMs</div>
+  <div class="filter" onclick="setFilter('vanilla',this)">💎 Vanilla</div>
+</div>
+
+<!-- SERVER -->
+<div class="server">
+  <b>EXI CLUB</b>
+  <div class="server-ip" onclick="copyTG()">CHANNEL TG</div>
+</div>
+
+<!-- LIST -->
+<div class="container" id="list"></div>
+
+<!-- ADMIN PANEL -->
+<div class="admin" id="admin">
+  <div class="admin-box">
+    <h2>Admin Panel</h2>
+
+    <input id="adminPass" placeholder="Password">
+    <button onclick="login()">Войти</button>
+
+    <div id="adminContent" style="display:none;">
+      <input id="name" placeholder="Nickname">
+      <input id="tiers" placeholder="HT1,LT2">
+      <select id="type">
+        <option value="all">Overall</option>
+        <option value="ltm">LTMs</option>
+        <option value="vanilla">Vanilla</option>
+      </select>
+      <select id="region">
+        <option value="na">NA</option>
+        <option value="eu">EU</option>
+      </select>
+
+      <button onclick="addPlayer()">Добавить</button>
+      <button onclick="clearPlayers()">Очистить всё</button>
+    </div>
+
+    <button onclick="closeAdmin()">Закрыть</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
